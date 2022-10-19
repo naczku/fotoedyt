@@ -19,13 +19,14 @@
 
     <ImageView
         android:id="@+id/obraz"
-        android:layout_width="333dp"
-        android:layout_height="277dp"
+        android:layout_width="264dp"
+        android:layout_height="270dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintVertical_bias="0.084"
         tools:srcCompat="@tools:sample/avatars" />
 
     <SeekBar
@@ -37,10 +38,12 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.542"
+        android:max="255"
+        android:progress="0"/>
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/przezrseek"
         android:layout_width="303dp"
         android:layout_height="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +51,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.632"
+        android:max="255"
+        android:progress="255"/>
 
     <Button
         android:id="@+id/button"
@@ -95,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.547" />
 
     <TextView
         android:id="@+id/textView3"
@@ -107,6 +112,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
+        app:layout_constraintVertical_bias="0.625" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
