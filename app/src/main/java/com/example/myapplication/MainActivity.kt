@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
                 imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
-                    Color.argb(p1,255,seekgreen.progress,seekblue.progress),BlendModeCompat.SRC_ATOP
+                    Color.argb(127,p1,seekgreen.progress,seekblue.progress),BlendModeCompat.SRC_ATOP
                 )
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
                 imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
-                    Color.argb(p1,seekred.progress,255,seekblue.progress),BlendModeCompat.SRC_ATOP
+                    Color.argb(127,seekred.progress,p1,seekblue.progress),BlendModeCompat.SRC_ATOP
                 )
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
                 imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
-                    Color.argb(p1,seekred.progress,seekgreen.progress,255),BlendModeCompat.SRC_ATOP
+                    Color.argb(127,seekred.progress,seekgreen.progress,p1),BlendModeCompat.SRC_ATOP
                 )
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {
