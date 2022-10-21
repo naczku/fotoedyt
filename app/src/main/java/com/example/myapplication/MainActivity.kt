@@ -55,5 +55,33 @@ class MainActivity : AppCompatActivity() {
 //
             }
         })
+        findViewById<SeekBar>(R.id.seekgreen).setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+
+                imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
+                    Color.argb(p1,0,255,0),BlendModeCompat.SRC_ATOP
+                )
+            }
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+//
+            }
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+//
+            }
+        })
+        findViewById<SeekBar>(R.id.seekblue).setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+
+                imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
+                    Color.argb(p1,0,0,255),BlendModeCompat.SRC_ATOP
+                )
+            }
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+//
+            }
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+//
+            }
+        })
     }
 }
