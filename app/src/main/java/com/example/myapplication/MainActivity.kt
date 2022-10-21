@@ -13,7 +13,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        val seekblue = findViewById<SeekBar>(R.id.seekblue)
+        val seekred = findViewById<SeekBar>(R.id.seekred)
+        val seekgreen = findViewById<SeekBar>(R.id.seekgreen)
         val seekBar = findViewById<SeekBar>(R.id.przezrseek)
         val imageView = findViewById<ImageView>(R.id.obraz)
         seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
@@ -45,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
                 imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
-                    Color.argb(p1,255,0,0),BlendModeCompat.SRC_ATOP
+                    Color.argb(p1,255,seekgreen.progress,seekblue.progress),BlendModeCompat.SRC_ATOP
                 )
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
                 imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
-                    Color.argb(p1,0,255,0),BlendModeCompat.SRC_ATOP
+                    Color.argb(p1,seekred.progress,255,seekblue.progress),BlendModeCompat.SRC_ATOP
                 )
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -73,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
                 imageView.colorFilter=BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
-                    Color.argb(p1,0,0,255),BlendModeCompat.SRC_ATOP
+                    Color.argb(p1,seekred.progress,seekgreen.progress,255),BlendModeCompat.SRC_ATOP
                 )
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -83,5 +85,6 @@ class MainActivity : AppCompatActivity() {
 //
             }
         })
+
     }
 }
