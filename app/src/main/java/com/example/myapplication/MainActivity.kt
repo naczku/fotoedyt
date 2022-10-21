@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import android.graphics.BlendModeColorFilter
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,6 +42,19 @@ class MainActivity : AppCompatActivity() {
 //
             }
         })
+        findViewById<SeekBar>(R.id.seekxobr).setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+
+                imageView.rotationX=(p1.toFloat())
+            }
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+//
+            }
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+//
+            }
+        })
+
         findViewById<SeekBar>(R.id.seekred).setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
